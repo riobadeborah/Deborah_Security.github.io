@@ -1,4 +1,6 @@
+// main.js
 var client; // Declare client globally
+var accessLog = []; // Array to store access log locally
 
 // Connect to the MQTT broker and subscribe to the topic
 function connectToMQTT() {
@@ -20,8 +22,21 @@ function connectToMQTT() {
     var listItem = document.createElement('li');
     listItem.appendChild(document.createTextNode(message.toString()));
     messageList.appendChild(listItem);
+
+    // Update the local access log array
+    accessLog.push(message.toString());
+
+    // Update the displayed access log
+    updateAccessLogDisplay();
   });
 }
 
 // Call the connectToMQTT function when the page loads
-window.onload = connectToMQTT;
+window.onload = function () {
+  // Load access log from local storage
+  var storedLog = localStorage.getItem('accessLog');
+  if (storedLog) {
+    accessLog = JSON.parse(storedLog);
+    updateAccessLogDisplay();
+  }
+};
