@@ -1,0 +1,17 @@
+/* styles.css */
+body {
+  font-family: Arial, sans-serif;
+  margin: 20px;
+}
+
+h1 {
+  text-align: center;
+}
+
+.file-input {
+  margin-bottom: 10px;
+}
+
+#logContent {
+  white-space: pre-line; /* Preserve line breaks */
+}

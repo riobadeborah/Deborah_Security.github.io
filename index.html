@@ -1,0 +1,41 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Security System</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <script src="auth.js"></script> <!-- Include the authentication script -->
+  <h1>Deborah Security System</h1>
+
+  <img src="Home_Page.png" alt="Security System Image" width="300" height="200">
+
+  <!-- Authentication form -->
+  <div id="loginForm">
+    <label for="username">Username:</label>
+    <input type="text" id="username" />
+    <label for="password">Password:</label>
+    <input type="password" id="password" />
+    <button onclick="authenticateUser()">Login</button>
+  </div>
+
+  <!-- File uploader and message list -->
+  <div id="fileUploader" style="display: none;">
+    <div id="fileContent"></div>
+    <ul id="messageList"></ul> <!-- List to display messages -->
+  </div>
+
+  <!-- Access Log Section -->
+  <div id="accessLogSection" style="display: none;">
+    <h2>Access Log:</h2>
+    <pre id="logContent"></pre> <!-- Display access log -->
+  </div>
+
+  <!-- Include MQTT.js library -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/mqtt/4.2.7/mqtt.min.js"></script>
+  <script src="main.js"></script>
+</body>
+</html>
