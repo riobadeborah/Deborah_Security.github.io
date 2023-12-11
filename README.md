@@ -17,7 +17,7 @@ This project implements a security system on a Raspberry Pi using a keypad, an O
 1. Clone this repository to your Raspberry Pi:
 
     ```bash
-    git clone https://github.com/your-username/security-system.git
+    https://github.com/riobadeborah/Deborah_Security.github.io.git
     ```
 
 2. Navigate to the project directory:
