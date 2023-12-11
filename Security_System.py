@@ -117,7 +117,7 @@ try:
             # Log the time and PIN entered using the logger
             logger.info('PIN Entered: %s', pin)
 
-            # Publish the PIN to the MQTT topic
+            # Publish the PIN and timestamp to the MQTT topic
             payload = f'{time.strftime("%Y-%m-%d %H:%M:%S")} - PIN: {pin}'
             mqtt_client.publish(mqtt_topic, payload, qos=1, retain=False)
 
