@@ -1,0 +1,32 @@
+#Smart Home Security System 
+
+This application picks 4-digit PIN from a 4x4 keypad and grants or denies access. This is indicated by green LED and red LED respectively. 
+
+## Installation
+
+To run this project, you need to install the following dependencies:
+
+### 1. RPi.GPIO
+
+```bash
+pip install RPi.GPIO
+
+### 2. time
+This module is a built-in Python module and does not require installation.
+
+### 3. logging
+This module is a built-in Python module and does not require installation.
+
+### 4. paho.mqtt.client
+pip install paho-mqtt
+
+### 5. luma.core
+pip install luma.core
+
+### 6. luma.oled
+pip install luma.oled
+
+
+Contributing
+
+If you'd like to contribute, please fork the repository and create a new branch. Pull requests are welcome!
